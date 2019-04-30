@@ -1,3 +1,13 @@
+ require('dotenv').config()
+
+const result = dotenv.config()
+ 
+if (result.error) {
+  throw result.error
+}
+ 
+console.log(result.parsed)
+
 // Make a request for a user with a given ID
 axios.get('/user?ID=12345')
   .then(function (response) {
@@ -19,6 +29,9 @@ axios.get('/user', {
   .catch(function (error) {
     console.log(error);
   });
+
+  var moment = require('moment');
+  moment().format();
 
 
 var Spotify = require('node-spotify-api');
