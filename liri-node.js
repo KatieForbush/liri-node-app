@@ -1,14 +1,16 @@
- require('dotenv').config()
+//  require('dotenv').config()
 
-const result = dotenv.config()
+// const result = dotenv.config()
  
-if (result.error) {
-  throw result.error
-}
+// if (result.error) {
+//   throw result.error
+// }
  
-console.log(result.parsed)
+// console.log(result.parsed)
 
 // Make a request for a user with a given ID
+var axios = require("axios");
+
 axios.get('/user?ID=12345')
   .then(function (response) {
     console.log(response);
@@ -17,21 +19,8 @@ axios.get('/user?ID=12345')
     console.log(error);
   });
  
-// Optionally the request above could also be done as
-axios.get('/user', {
-    params: {
-      ID: 12345
-    }
-  })
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
-
-  var moment = require('moment');
-  moment().format();
+   var moment = require('moment');
+   moment().format();
 
 
 var Spotify = require('node-spotify-api');
@@ -41,10 +30,10 @@ var spotify = new Spotify({
   secret: `cbfc6a5a09ab474a9daf6046a7db0bdc`
 });
  
-spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
-  if (err) {
-    return console.log('Error occurred: ' + err);
-  }
+// spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
+//   if (err) {
+//     return console.log('Error occurred: ' + err);
+//   }
  
-console.log(data); 
-});
+// console.log(data); 
+// });
