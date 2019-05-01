@@ -30,10 +30,10 @@ var spotify = new Spotify({
   secret: `cbfc6a5a09ab474a9daf6046a7db0bdc`
 });
  
-// spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
-//   if (err) {
-//     return console.log('Error occurred: ' + err);
-//   }
+spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
+  if (err) {
+    return console.log('Error occurred: ' + err);
+  }
  
-// console.log(data); 
-// });
+console.log(data); 
+});
