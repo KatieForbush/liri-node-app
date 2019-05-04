@@ -59,11 +59,15 @@ function spotifyThisSong(trackName) {
   spotify.search({
     type: 'track',
     query: trackName
+  
   },
     function (err, data) {
       if (err) {
         // return console.log('Error occurred: ' + err);
       }
-      console.log(data.tracks.items);
+      var searchResult = data.tracks.items[0];
+      console.log(Object.keys(searchResult));
+      // console.log(data.tracks.items);
+      
     });
 }
